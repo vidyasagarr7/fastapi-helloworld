@@ -20,8 +20,12 @@ app = FastAPI()
 
 @app.get("/")
 def hello_world():
-   return {"Hello": "World"}
+    return {"Hello": "World"}
 
+
+@app.get("/hello")
+def hello():
+    return {"Hello": "World"}
 
 @app.get("/one/hello")
 def read_root():
