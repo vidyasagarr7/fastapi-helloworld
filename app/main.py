@@ -18,6 +18,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
+@app.get("/")
+def hello_world():
+   return {"Hello": "World"}
+
+
 @app.get("/one/hello")
 def read_root():
     if "HELLOWORLD_ENV" in environ:
