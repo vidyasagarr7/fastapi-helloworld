@@ -20,6 +20,7 @@ app = FastAPI()
 
 @app.get("/")
 def hello_world():
+    print("HELLO WORLD")
     return {"Hello": "World"}
 
 
